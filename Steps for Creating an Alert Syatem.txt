@@ -1,0 +1,88 @@
+1)Steps for Creating an Alert Syatem for IoT Hub Via Logics Apps & Service Bus.
+
+Create Service Bus
+-Create Queue
+-Open the Service Bus queue from the list, and then select Shared access policies > + Add.
+-Enter a name for the policy, check Manage, and then select Create.
+Add a custom endpoint and routing rule to your IoT hub
+-Add a custom endpoint--select Service bus queue.
+-Add a routing rule-- Add a route.
+Create and configure a Logic App
+-Create a logic app.
+-Configure the logic app trigger.
+-In the Logic Apps Designer, scroll down to Templates and select Blank Logic App.
+-Select the All tab and then select Service Bus.
+-Under Triggers, select When one or more messages arrive in a queue (auto-complete).
+-Create a service bus connection.
+-Enter a connection name and select your Service Bus namespace from the list. The next screen opens.
+-Select the service bus policy (RootManageSharedAccessKey). Then select Create.
+-On the final screen, for Queue name, select the queue that you created from the drop-down. Enter 175 for Maximum message count.
+Configure the logic app action
+1)Through SMTP
+-Create an SMTP service connection.
+--Select New step. In Choose an action, select the All tab.
+--Type smtp in the search box, select the SMTP service in the search result, and then select Send Email.
+--Enter the SMTP information for your mailbox, and then select Create.
+--From the Add new parameter drop-down on the Send Email step, select From, To, Subject and Body. Click or tap anywhere on the screen to close the selection box.
+--Enter your email address for From and To, Subject and Body.
+--Select Save to save the SMTP connection.
+--logic app is now ready to process temperature alerts from the Service Bus queue and send notifications to your email account.
+
+2)Through OFFICE 365
+-Sign in via your email for connection.
+-Add email, subject , body, in email to be sent.
+-Save
+
+In my opinion Office 365 would be better choice as in SMTP we have to create our own SMTP server.
+
+------------------------------------------------
+
+2)Steps for Creating an Alert Syatem for IoT Hub Via built in alert system.
+
+Create and visualize some metrics
+-In your IoT Hub portal, locate and click Metrics in the Monitoring section
+-In the bar that starts with the SCOPE entry, verify that SCOPE is set to the name of your IoT Hub. Leave the METRIC NAMESPACE at its default.
+-For METRIC, scroll down to near the end of the list, and select Telemetry messages sent. Leave the AGGREGATION entry as Sum.
+-n the top-right of the portal, change the Time range to Last 30 minutes, and click Apply.
+-It's important to click Pin to dashboard, then Pin to current dashboard. If you do not pin a metric to a dashboard, it will not be persisted after you navigate away from the current dashboard. You should get a confirmation notification that the chart has been pinned.
+
+Create an alert using the metrics and email action
+-In the portal page for your IoT Hub, click Alerts.
+-Select + New alert rule. This button will bring up the Create rule page.
+-The RESOURCE entry should already have your IoT Hub name as the selection.
+-Let's create the action group next. Click Create, in the ACTION GROUPS section.
+-Then select the Email/SMS/Push/Voice for Action Type.
+-For the Email/SMS/Push/Voice entry, click the Email checkbox, and enter the email address you want the alerts to go to.
+-Leave the other entries blank, and click OK.
+-Click OK again, to add the action group. You should now be back at the Create rule page. Now, click Add under CONDITION. In the Configure signal logic page, go to the last page of entries, and select Condition eg:Connected devices (preview).
+-In the Configure signal logic page, locate the Operator entry, and change it to Greater than or equal to. Change the Aggregation type to Minimum, and the Threshold value to 1. Change the Aggregation granularity (Period) entry to 1 minute. 
+-Click Done.
+-Add an Alert rule name, and a brief Description, to complete the Create rule page. Leave the Severity as Sev 3, and leave Enable rule upon creation as Yes. Now, click Create alert rule, noting the message it can take up to 10 minutes for this rule to become active.
+
+-----------------------------------------------------------------------
+
+3)Logic App- Using http and Outlook 365 as its 2 Steps and Event Grid.
+
+End to End Steps:
+1)Build a Logic App and in that ,
+i)1st step was to add http request and in it write sample Json Device connected event schema which tells when a device is connected to Iot Hub.(The Json Files are pre- configured and I would be adding all Json files of 5 available Event Types in a documentation)
+ii)2nd Step was to add email attributes via Office 365 V2(Send Email).
+
+2)Register Microsoft.EventGrid in Resource provider (In Subscription).
+
+3)Now In IoT Hub:
+(i)Build Event Grid
+
+4)Connect Device.
+
+5)Received Email
+
+It basically offers 5 types of Events:
+-Device Created
+-Device Deleted
+-Device Connected
+-Device Disconnected
+-Device Telemetry
+All With Timestamp, IoT Hub Name, Device Id, etc fields.
+
+

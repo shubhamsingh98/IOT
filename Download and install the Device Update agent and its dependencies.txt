@@ -1,0 +1,68 @@
+Download and install the Device Update agent and its dependencies
+Add a tag to your device
+Import an update
+Create a device group
+Deploy a package update
+Monitor the update deployment
+
+-Click Create a Resource and search for "Device Update for IoT Hub"
+-Click Create -> Device Update for IoT Hub
+-Specify the Azure Subscription to be associated with your Device Update Account and Resource Group
+-Specify a Name and Location for your Device Update Account
+-Click "Next: Review + create>"
+-You will see the deployment status change to "complete" in a few minutes. Click "Go to resource"
+
+Create a device update instance
+An instance of Device Update is associated with a single IoT hub. Select the IoT hub that will be used with Device Update. We will create a new Shared Access policy during this step to ensure Device Update uses only the required permissions to work with IoT Hub (registry write and service connect). This policy ensures that access is only limited to Device Update.
+
+To create a Device Update instance after an account has been created.
+-Once you are in your newly created account resource, go to the Instance Management "Instances" blade
+-Click "Create and specify an instance name and select your IoT Hub
+-Click "Create". You will see the instance in a "Creating" state.
+-Allow 5-10 mins for the instance deployment to complete. Refresh the status till you see the "Provisioning State" turn to "Succeeded".
+
+Configure IoT Hub
+In order for Device Update to receive change notifications from IoT Hub, Device Update integrates with the "Built-In" Event Hub. Clicking the "Configure IoT Hub" button configures the required message routes and access policy required to communicate with IoT devices.
+
+To configure IoT Hub
+-Once the Instance "Provisioning State" turns to "Succeeded", select the instance in the Instance Management blade. Click "Configure IoT Hub"
+-Select "I agree to make these changes"
+-Click "Update"
+
+Configure access control roles
+In order for other users to have access to Device Update, users must be granted access to this resource.
+
+-Go to Access control (IAM) within the Device Update account
+-Click "Add role assignments"
+-Under "Select a Role", select a Device Update role from the given options
+
+Device Update Administrator
+Device Update Reader
+Device Update Content Administrator
+Device Update Content Reader
+Device Update Deployments Administrator
+Device Update Deployments Reader
+
+-Assign access to a user or Azure AD group
+-Click Save
+-You are now ready to use the Device Update experience from within your IoT Hub
+
+
+
+
+1)Deploy Iot Edge.
+2)Connect Device.
+3)Dploy Vm.
+-Deploy edge Runtime.
+-Deploy Update Agent.
+sudo apt-get install deviceupdate-agent deliveryoptimization-plugin-apt
+
+4)Add Tags in Device twin or Module Twin.
+5)Go to Update Device under Automatic Device Management.
+-Import Update:Import New Update.
+Select an Import Manifest File.
+Select one or more update Files.
+Select Storage Container.
+Select "Submit" to start the import process.
+6) 	
+

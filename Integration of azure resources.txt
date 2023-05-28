@@ -1,0 +1,94 @@
+4. Integration of azure resources
+
+-IOT Hub
+-Stream Analytics
+-Power Bi
+
+4.1.IOT Hub with Stream Analytics:
+4.1.1Adding a Consumer Group to IoT Hub:
+Consumer groups are used by applications to pull data from the IoT Hub.
+
+Follow the steps given below to add a consumer to your IoT Hub :
+
+1.  Sign in to your Microsoft Azure account.
+
+2.  Open your IoT Hub. Click on Endpoints under Messaging.
+
+3.  In the window that appears after clicking on Endpoints, click on the built-in endpoint named Events. This is shown in the image given below.
+
+4.  A new window named Properties will open. In this window, find Consumer Groups and enter a name for a new consumer group and then click on Save at the top-left of that window.
+
+4.1.2Add an Input to the Stream Analytics Job:
+
+1.  Open the Stream Analytics job you created.
+
+2.  Click on Inputs. It is listed under Job Topology.
+
+3.  In the window that opens, click on Add.
+
+4.  A New Input window will open. Fill in the details asked.
+
+Input Alias : Unique alias for input. A green check mark will appear if it is valid.
+Source Type : Select Data Stream.
+Source : Select IoT Hub.
+Import Option : Choose Select IoT hub from your subscriptions option.
+IoT Hub : Choose your IoT Hub name.
+Endpoint : Select Messaging.
+Shared access policy name : Select iothubowner.
+Consumer group : Choose the consumer group you created earlier.
+Event Serialization Format :  Select JSON.
+Encoding : Select UTF-8.
+Event compression type : Select None.
+
+5.  Click Create.
+
+4.2.Stream Analytics With Power Bi:
+4.2.1Add an Output to the Stream Analytics Job:
+
+1.  Open the Stream Analytics job you created.
+
+2.  Click on Outputs. It is listed under Job Topology.
+
+3.  In the window that opens, click on Add.
+
+4.  A New Output window will open. Fill in the details asked.
+
+Input Alias : Unique alias for output. A green check mark will appear if it is valid.
+Sink : Select Power BI.
+
+5.  After selecting Sink as Power BI, Authorize option will appear. Click on Authorize.
+
+6.  A new tab will open in your browser and take you to a Microsoft sign-in page. Enter your credentials for Microsoft Power BI there and sign in.
+
+7.  The following options will appear in the New Output window after authorization.
+
+Group Workspace : Select My Workspace or any other target workspace.
+Dataset Name : Enter a name for the dataset.
+Table Name : Enter a name for the table.
+
+8.  Click Create.
+
+
+4.2.2Configure the Query of the Stream Analytics Job
+
+1.  Open the Stream Analytics job you created.
+
+2.  Click on Query. It is listed under Job Topology.
+
+3.  In the window that opens,
+Replace [YourInputAlias] with the input alias of the job you created.
+Replace [YourOutputAlias] with the output alias of the job you created.
+
+4.  Click Save on the top left of the window.
+
+4.2.3Run the Stream Analytics Job
+
+1.  Open the Stream Analytics Job from the dashboard.
+
+2.  Click on the Start button on the top left corner.
+
+3.  A new window will open. Select Job output start time as Now and click Start.
+
+4.  You will see that the Status changes from Created to Starting. And when the service has started, it changes to Running.
+
+ 

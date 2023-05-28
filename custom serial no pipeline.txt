@@ -1,0 +1,8 @@
+1.1.0.$(Rev:r)
+
+$(Build.BuildNumber)
+
+Doc update
+set up vm , iot edge runtime, update agent
+iot hub, edge device
+create device update account, instance , linling iot hub

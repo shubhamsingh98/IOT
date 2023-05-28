@@ -1,0 +1,24 @@
+New Agent Pool
+urel to download the agent:
+https://vstsagentpackage.azureedge.net/agent/2.187.2/vsts-agent-linux-x64-2.187.2.tar.gz
+Access Token for 30 days:
+phnjhwbrffteyaa2pkwxwbessq5kmvrpgnu7lh6a3zgq43ox4twq
+
+export COMPOSE_FILE=development.yaml
+docker-compose up -d 
+docker-compose logs -f
+
+
+$AZP_URL="https://dev.azure.com/CroweConsultingMD/Cloud%20Transformation"
+$AZP_URL="https://dev.azure.com/CroweConsultingMD/Cloud%20Transformation"
+$AZP_TOKEN="phnjhwbrffteyaa2pkwxwbessq5kmvrpgnu7lh6a3zgq43ox4twq"
+$AZP_AGENT_NAME="agentncf-001"
+
+
+docker run -e AZP_URL=$AZP_URL -e AZP_TOKEN=$AZP_TOKEN -e AZP_AGENT_NAME=$AZP_AGENT_NAME dockeragent:latest
+
+NewADOtoACR-002
+
+
+
+./run.sh command to run agent on vm

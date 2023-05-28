@@ -1,0 +1,79 @@
+IoT Hub Built In Alert Conditions
+
+
+C2D messages abandoned
+C2D message deliveries completed
+C2D messages rejected
+Failed direct method invocations
+Request size of direct method invocations
+Response size of direct method invocations
+Successful direct method invocations
+Failed twin reads from back end
+Response size of twin reads from back end
+Successful twin reads from back end
+Failed twin updates from back end
+Size of twin updates from back end
+Successful twin updates from back end
+C2D Messages Expired
+Configuration Metrics
+Connected devices
+Routing: messages delivered to messages/events
+Routing: messages delivered to Event Hub
+Routing: messages delivered to Service Bus Queue
+Routing: messages delivered to Service Bus Topic
+Routing: messages delivered to storage
+Routing: blobs delivered to storage
+Routing: data delivered to storage
+Routing: message latency for messages/events
+Routing: message latency for Event Hub
+Routing: message latency for Service Bus Queue
+Routing: message latency for Service Bus Topic
+Routing: message latency for storage
+Routing: telemetry messages dropped
+Routing: messages delivered to fallback
+Routing: telemetry messages incompatible
+Routing: telemetry messages orphaned
+Routing: telemetry messages delivered
+Telemetry message send attempts
+Number of throttling errors
+Telemetry messages sent
+Failed twin reads from devices
+Response size of twin reads from devices
+Successful twin reads from devices
+Failed twin updates from devices
+Size of twin updates from devices
+Successful twin updates from devices
+Total number of messages used
+Total device data usage
+Total device data usage (preview)
+Connected devices (deprecated)
+Total devices (deprecated)
+Event Grid deliveries
+Event Grid latency
+Failed job cancellations
+Successful job cancellations
+Completed jobs
+Failed creations of method invocation jobs
+Successful creations of method invocation jobs
+Failed creations of twin update jobs
+Successful creations of twin update jobs
+Failed jobs
+Failed calls to list jobs
+Successful calls to list jobs
+Failed job queries
+Successful job queries
+Routing Delivery Message Size in Bytes (preview)
+Routing Deliveries (preview)
+Routing Delivery Latency (preview)
+Total devices
+Failed twin queries
+Twin queries result size
+Successful twin queries
+All Administrative operations
+Create or update IotHub Resource (Microsoft.Devices/iotHubs)
+Delete IotHub Resource (Microsoft.Devices/iotHubs)
+Get all IotHub Keys (Microsoft.Devices/iotHubs)
+Export Devices (Microsoft.Devices/iotHubs)
+Import Devices (Microsoft.Devices/iotHubs)
+Approve Private Endpoint Connection (Microsoft.Devices/iotHubs)
+

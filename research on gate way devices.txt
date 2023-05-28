@@ -1,0 +1,45 @@
+Ram-
+Memory-
+Connectivity-
+Hardware Interface-
+Industrial Protocols-
+Integrated Sensors-
+OS-
+Processor Manufactures-
+Secure Hardware-
+
+
+Questions:
+Why would we want more or less RAM on a device?
+Why would we want a more or less powerful CPU on a device?
+What are the advantages and disadvantages of different types of devices?
+What amount do you expect we would need to spend on a physical device?	
+
+-----------------------------------------
+
+1)Memory(Industrial gateways deployed in factories, usually collect multiple sensor readings every second. However, situations such as network failures may arise and as a result the gateway will need to store this data while the network issues are being remedied.)
+-At least 20 Gb
+-It is advisable therefore to invest in a gateway that allows for expansion of storage and additional micro-SD slots .
+2)Does the gateway have built-in security features and options?
+3)Is the gateway certified?
+The gateway model should be FCC/CE/IC certified, in accordance with the standard compliance required for electronic products. There are additional certifications such as Mobile PTCRB/GCF and safety certifications, which are worthwhile to note.
+4)Does the data being collected from the sensors need to be filtered?
+5)How much data does the gateway need to collect from the sensors?
+6
+-------------------------
+ perform many tasks, from simple data filtering to enabling visualization and complex analytics.
+
+IoT Gateway feature set
+A versatile IoT Gateway may perform any of the following :
+
+Facilitating communication with legacy or non-internet connected devices
+Data caching, buffering and streaming
+Data pre-processing, cleansing, filtering and optimization
+Some data aggregation
+Device to Device communications/M2M
+Networking features and hosting live data
+Data visualization and basic data analytics via IoT Gateway applications
+Short term data historian features
+Security – manage user access and network security features
+Device configuration management
+System diagnostics

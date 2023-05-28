@@ -1,0 +1,34 @@
+IOT Central Vs IOT Hub
+
+IOT Central:
+-SaaS
+-Offers to connect,manage & monitor devices at scale.
+-enterprise-grade IoT solutions
+-define and manage device message templates centrally based on device types.
+-Automate/Code free or little code.
+-Message Retention:30 days.
+-Built-In Dashboard supported and provides a customizable UI to monitor device health and telemetry.
+-Supported SDK's to simulate device:Node.js,Python.
+-Provides data export to : blob storage, event hubs, service bus, Webhook.
+-Built-In Device Provisioning Service.
+
+
+IOT Hub:
+-Paas
+-Offers to connect millions of device securely and at a scale.
+-More used for custum Iot Solutions.
+-requires user to create own repository to define and manage device message template.
+-Require code.
+-Message Retention:7 days.
+-Built-In Dashboard not supported.
+-Supported SDK's to simulate device:Node.js,Python,C#,Java,C.
+-Provides data export to : built-in event hub endpoint or can make use of message routing.
+-Device Provisioning Service setup required separately.
+
+
+
+--------------------------------
+IOT Central
+
+
+-

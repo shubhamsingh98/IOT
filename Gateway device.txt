@@ -1,0 +1,98 @@
+1)Ram: Min 2Gb or more.
+These requirements imply the typical whole hardware requirement.Or other resource demanding services or algorithms, you might need more.
+
+2)Memory: Min 8 Gb
+Based on How much data can the gateway store? Or How much data does the gateway need to collect from the sensors?
+Based on sensor readings every second.
+In case of network failures may arise and as a result the gateway will need to store this data while the network issues are being remedied. 
+
+--8 Or --
+
+3)CPU:
+Minimum: 1 x Cortex-A7, 1 GHz or better.
+Depends a lot also on the other services and algorithms run on the Edge.
+
+--Research more----
+
+4)Is the gateway certified?
+The gateway model should be FCC/CE/IC certified.
+There are additional certifications such as Mobile PTCRB/GCF.
+
+-FFC:The FCC logo or the FCC mark is a voluntary mark employed on electronic products manufactured or sold in the United States which indicates that the electromagnetic radiation from the device is below the limits specified by the Federal Communications Commission and the manufacturer has followed the requirements of the Supplier's Declaration of Conformity authorization procedures.
+-PTCRB:PTCRB certification is required for products that rely on mobile communications technologies and are intended to be operated in the USA. 
+
+--YES/No--
+
+5)Does the gateway have built-in security features and options?
+Required to deal with Unauthorized access to critical network infrastructure.
+Should support TPM for Secured hardware.
+TMP: Trusted Platform Module, is the international standard for a security cryptoprocessor and is used with software to enable features of integrity measurements, health checks, and authentication services. 
+
+--NO--
+
+
+6)Which connectivity options, protocols and interfaces are provided by the gateway?
+
+7)Does the data being collected from the sensors need to be filtered?
+Data from sensors can be collected and then sent directly to the analytical processing unit in the cloud. However, in many IoT projects not all the data from the sensors is needed or the gateway may have to perform some pre-processing operations on the data obtained from the sensors before it is sent to the analytical processing unit.
+Therefore it should be edge-analytics-enabled gateways.
+
+--NO--
+
+8)Clock:This is needed to handle any certificate validity time attacks.
+
+Questions:
+
+Industrial Protocols:
+-CAN Bus
+-EtherCAT
+-Modbus
+-OPC Classic
+-OPC UA
+-Others
+-PPMP
+-PROFINET
+-ZigBee
+
+Os:
+-Linux
+-Windows
+-Arduino
+-Azure RTOS
+-Free RTOS
+-Mbed
+-No Os Bare Metal
+-RTOS
+-Android
+-Other
+
+Connectivity:
+-Bluetooth.
+-5G
+-LAN
+-LTE
+-LTE_M
+-LoRaWAN
+-Narrowband IoT
+-3G
+-WIFI
+-Others
+
+
+
+Ethernet protocol
+
+linux
+
+LAN
+
+--------------------Sample Selected ---------------------------
+
+4) CloudPlug edge+
+7)xGATEWAY PURE
+8) ASUS-PE100A
+
+
+how could we create customised state in devops
+
+Client : Controllogix PLC
